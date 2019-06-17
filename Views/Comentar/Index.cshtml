@@ -1,0 +1,19 @@
+@{
+    Layout = "_Layout";
+}
+<main>
+    <h2>Deixe seu Comentário</h2>
+<div class="comentar">
+    <form method="POST" action='@Url.Action("")'>
+        <div>
+            <label for="comente">Comente:</label>
+        <br/>
+        <input name="comente" id="comente" type="text" maxlength="100" minlength="10" required/>
+        <br/>
+        </div>
+
+        <input type="submit" value="Enviar Comentário">
+
+    </form>
+</div>
+</main>

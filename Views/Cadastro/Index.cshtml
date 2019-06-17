@@ -1,0 +1,49 @@
+@{
+    Layout = "_Layout";
+}
+<main>
+            <h2>Cadastro</h2>
+<div class="ficha">
+
+    <form method="POST" action='@Url.Action("Cadastrar", "Cadastro")'>
+        <div>
+            <label for="nome">Nome completo:</label>
+            <br/>
+            <input name="nome" id="nome" type="text" maxlength="50" minlength="3" required/>
+            <br/>
+        </div>
+        
+        <div>
+            <label for="empresa">Nome da Empresa:</label>
+            <br/>
+            <input name="empresa" id="empresa" type="text" maxlength="50" minlength="3" required/>
+            <br/>
+        </div>
+        
+        <div>
+            
+            <label for="telefone">Telefone:</label>
+            <br/>
+            <input name="telefone" id="telefone" type="text" maxlength="50" minlength="3" required/>
+            <br/>
+        </div>
+        
+        <div>
+            <label for="email">E-mail:</label>
+            <br/>
+            <input name="email" id="email" type="text" maxlength="50" minlength="3" required/>
+            <br/>
+        </div>
+        
+        <div>
+            <label for="senha">Senha:</label>
+            <br/>
+            <input name="senha" id="senha" type="text" maxlength="50" minlength="3" required/>
+            <br/>
+        </div>
+        
+        <input type="submit" value="Cadastrar!">
+        <br/>
+            </form>
+        </div>
+        </main>

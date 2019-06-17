@@ -1,0 +1,27 @@
+@{
+    Layout = "_Layout";
+}
+    <main>
+            <h2>Login</h2>
+<div class="ficha">
+
+    <form method="POST" action='@Url.Action("Login", "Entrar")'>
+        <div>
+            <label for="email">E-mail:</label>
+            <br/>
+            <input name="email" id="email" type="text" maxlength="50" minlength="3" required/>
+            <br/>
+        </div>
+        
+        <div>
+            <label for="senha">Senha:</label>
+            <br/>
+            <input name="senha" id="senha" type="text" maxlength="50" minlength="3" required/>
+            <br/>
+        </div>
+        
+        <input type="submit" value="Login">
+        <br/>
+            </form>
+        </div>
+        </main>

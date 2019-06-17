@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ponto Digital.</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    @if("Cadastrar".Equals((string)ViewData["NomeTela"])){
+        <link real="stylesheet" href="~/css/style_cadastrar.css">
+    }
+    @if("Entrar".Equals((string)ViewData["NomeTela"])){
+        <link real="stylesheet" href="~/css/style_entrar.css">
+    }
+
+</head>
+
+<body>
+
+    <header class="topo container">
+        <div class="conteudo_topo content">
+            <h1>Ponto Digital</h1>
+            <nav class="menu" id="menu_principal">
+                <ul>
+
+                    <li>
+                        <a href="index.html#quem_somos">Quem somos</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#como_usar">Como usar</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#qualidades_flex">Qualidades do produto</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#FAQ">FAQ</a>
+                    </li>
+
+                    <li>
+                        <a href='@Url.Action("Index","Entrar")'>Entrar</a>
+                    </li>
+
+                    <li>
+                        <a href='@Url.Action("Index","Cadastro")'>Cadastrar</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        @RenderBody()
+       
+            <footer>
+                    <address>
+                            Avenida de Limeira, 539 - Campos Elíseos - São Paulo - SP
+                            <br />
+                            pontodigital@gmail.com
+                            <br />
+                            (11) 4402-8922
+                        </address>
+                        <a href="#">Voltar para o topo!</a>
+            </footer>
+        
+        </section>
+
+</body>
+
+</html>
+
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
